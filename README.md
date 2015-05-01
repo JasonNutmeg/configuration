@@ -3,6 +3,7 @@ This is my central repository for storing all of my config and preferences files
 
 
 ### Sublime Text 3
+---
 #### Preferences.sublime-settings
 *Preferences.sublime-settings* contains the user preferences for the Sublime Text 3 editor.
 
