@@ -2,8 +2,8 @@
 This is my central repository for storing all of my config and preferences files.
 
 
-## Sublime Text 3
-### Preferences.sublime-settings
+### Sublime Text 3
+#### Preferences.sublime-settings
 *Preferences.sublime-settings* contains the user preferences for the Sublime Text 3 editor.
 
 To add the preferences to Sublime:
@@ -15,7 +15,7 @@ To add the preferences to Sublime:
 5. Paste the preferences
 6. Save
 
-### Completions
+#### Completions
 *Completions.sublime-completions* contains JavaScript boilerplate auto-completions.
 
 To add the completions to Sublime:
