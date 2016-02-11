@@ -24,9 +24,3 @@ To add the completions to Sublime:
 1. Download *Completions.sublime-completions* from GitHub
 2. Open *C:\Users\Jason\AppData\Roaming\Sublime Text 3\Packages\User*
 3. Drop in *Completions.sublime-completions*
-
-
-# TODO:
-
-- [ ] Add a Sublime preference file for my theme
-- [ ] Create a tool to auto-generate the documentation for my Sublime completions
