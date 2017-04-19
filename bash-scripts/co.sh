@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Check out a git branch by passing in a unique string to identify the branch.
+
 if [ $# -eq 0 ]; then
 	echo "Usage: \$ co part_of_branch_name"
 	return 1
