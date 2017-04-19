@@ -16,6 +16,9 @@ if [ $BRANCH_COUNT -eq 0 ]; then
 elif [ $BRANCH_COUNT -gt 1 ]; then
 	printf  "More than one branch found:\n$BRANCH"
 	return 1
+elif [[ $BRANCH == \** ]]; then
+	printf  "Already on branch: $BRANCH"
+	return 1
 fi
 
 git checkout $BRANCH
