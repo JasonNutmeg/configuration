@@ -1,0 +1,7 @@
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# user -> colon -> directory (in italic) -> current git branch (in purple and parentheses) -> right arrow
+#Example: jason:[Documents] (master) >
+PS1="\[\033[00m\]\u:\e[3m[\W]\e[0m\[\033[35m\]\$(parse_git_branch)\[\033[00m\]> "
