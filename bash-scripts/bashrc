@@ -3,5 +3,6 @@ parse_git_branch() {
 }
 
 # user -> colon -> directory (in italic) -> current git branch (in purple and parentheses) -> right arrow
-#Example: jason:[Documents] (master) >
-PS1="\[\033[00m\]\u:\e[3m[\W]\e[0m\[\033[35m\]\$(parse_git_branch)\[\033[00m\]> "
+#Example: jason@:my-macbook:[~/jason/Documents] (master)
+# $ 
+export PS1="\u@\h:[\[$(tput sgr0)\]\[\033[38;5;38m\]\w\[\033[0m\]] \[$(tput sgr0)\]\[\033[38;5;165m\]\$(parse_git_branch)\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput sgr0)\]\[\033[38;5;10m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
