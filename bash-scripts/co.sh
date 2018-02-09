@@ -4,7 +4,7 @@
 
 if [ $# -eq 0 ]; then
 	echo "Usage: \$ co part_of_branch_name"
-	return 1
+	exit 1
 fi
 
 BRANCH_COUNT=`git branch | grep -c $1`
@@ -16,7 +16,7 @@ if [ $BRANCH_COUNT -eq 0 ]; then
 
 	if [ $REMOTE_BRANCHES_COUNT -eq 0 ]; then
 		echo "No branches found"
-		return 1
+		exit 1
 	fi
 
 	if [[ $REMOTE_BRANCH == "remotes/origin/"* ]]; then # if starts with remote branch
@@ -24,10 +24,10 @@ if [ $BRANCH_COUNT -eq 0 ]; then
 	fi	
 elif [ $BRANCH_COUNT -gt 1 ]; then
 	printf  "More than one branch found:\n$BRANCH"
-	return 1
+	exit 1
 elif [[ $BRANCH == \** ]]; then
 	printf  "Already on branch: $BRANCH"
-	return 1
+	exit 1
 fi
 
 git checkout $BRANCH
