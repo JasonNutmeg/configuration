@@ -23,7 +23,17 @@ if [ $BRANCH_COUNT -eq 0 ]; then
 		BRANCH=`echo $REMOTE_BRANCH | cut -d'/' -f 3` # split string by '/' and use the 3rd substring
 	fi	
 elif [ $BRANCH_COUNT -gt 1 ]; then
-	printf  "More than one branch found:\n$BRANCH"
+	printf  "More than one branch found:\n"
+	
+	
+	IFS=' ' read -ra BRANCHES <<< "$BRANCH"
+	for b in "${BRANCHES[@]}"; do
+		if [[ $b != \** ]]; then
+	    	printf "$b\n"
+	    fi
+	done
+	printf "\n"
+
 	exit 1
 elif [[ $BRANCH == \** ]]; then
 	printf  "Already on branch: $BRANCH"
